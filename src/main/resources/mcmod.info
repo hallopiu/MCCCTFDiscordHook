@@ -1,0 +1,11 @@
+[{
+  "modid": "mcctfdiscordhook",
+  "name": "MCCTF Discord Hook",
+  "description": "Lets you display your current CTF game status on your own Discord profile!",
+  "version": "1.0.0.0",
+  "mcversion": "${mcversion}",
+  "logoFile": "assets/ctfDiscord.png",
+  "url": "https://github.com/hallopiu/MCCTFDiscordHook",
+  "authorList": ["redslime"],
+  "credits": "Shoutout to mike for helping me with some stuff. Thanks to NomNuggetNom for some useful util classes."
+}]

@@ -1,0 +1,75 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+		maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+    }
+
+}
+plugins {
+    id 'com.github.johnrengelman.plugin-shadow' version '2.0.2'
+    id 'java'
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = "1.0"
+group= "redsli.me.mcctfdiscordhook" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "mcctfdiscordhook"
+minecraft {
+    version = "1.8.9-11.15.1.2318-1.8.9"
+    runDir = "run"
+    mappings = "stable_20"
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    compile 'org.json:json:20171018'
+    compile 'com.jagrosh:DiscordIPC:0.3'
+}
+
+shadowJar {
+    relocate 'org.slf4j', 'shadow.org'
+    relocate 'org.json', 'shadow.org'
+    relocate 'com.jagrosh', 'shadow.com'
+}
+
+processResources {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+reobf {
+    shadowJar{}
+}
+tasks.build.dependsOn reobfShadowJar
