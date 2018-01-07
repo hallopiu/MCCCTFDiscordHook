@@ -6,6 +6,7 @@ import com.jagrosh.discordipc.entities.DiscordBuild;
 import com.jagrosh.discordipc.entities.Packet;
 import com.jagrosh.discordipc.entities.RichPresence;
 import com.jagrosh.discordipc.exceptions.NoDiscordClientException;
+import redsli.me.mcctfdiscordhook.Main;
 
 /**
  * Created by redslime on 07.01.2018
@@ -36,6 +37,7 @@ public class DiscordHelper {
             });
             client.connect(DiscordBuild.STABLE, DiscordBuild.ANY);
         } catch (NoDiscordClientException e) {
+            Main.error = true;
             e.printStackTrace();
         }
     }

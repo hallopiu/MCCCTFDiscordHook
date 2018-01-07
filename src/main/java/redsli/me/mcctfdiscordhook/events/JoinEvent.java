@@ -37,7 +37,10 @@ public class JoinEvent {
 							if(BoardHelper.getBoardTitle().matches(SB_TITLE)) {
 								new IgnoreResult("/ip", ChatEvent.RE_IP);
 								new IgnoreResult("/map", ChatEvent.RE_MAP);
-								Main.mc.thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "[" + EnumChatFormatting.GOLD + "MCCTFDiscordHook" + EnumChatFormatting.DARK_GRAY+ "]" + EnumChatFormatting.WHITE + " Sending CTF game status to Discord!"));
+								if(!Main.error)
+								    Main.sendMessage("Sending CTF game status to Discord!");
+								else
+								    Main.sendMessage(EnumChatFormatting.RED + "RIP. An error occurred. Check logs for more details");
 							}
 						}
 					}, 2000);

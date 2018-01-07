@@ -1,5 +1,6 @@
 package redsli.me.mcctfdiscordhook;
 
+import net.minecraft.util.ChatComponentText;
 import redsli.me.mcctfdiscordhook.events.ChatEvent;
 import redsli.me.mcctfdiscordhook.events.JoinEvent;
 import redsli.me.mcctfdiscordhook.tasks.DiscordPresenceUpdater;
@@ -31,6 +32,7 @@ public class Main {
 	public static DiscordPresenceUpdater dpu;
 	public static DiscordHelper discordHelperCtf;
 	public static DiscordHelper discordHelperMinecraft;
+	public static boolean error = false;
 	
 	@Instance
 	public static Main instance = new Main();
@@ -59,4 +61,8 @@ public class Main {
             dpu.shutdown();
         }));
 	}
+
+	public static void sendMessage(String message) {
+        Main.mc.thePlayer.addChatMessage(new ChatComponentText(PREFIX + message));
+    }
 }
