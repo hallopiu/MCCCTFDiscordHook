@@ -1,8 +1,8 @@
-package main.java.redsli.me.mcctfdiscordhook.events;
+package redsli.me.mcctfdiscordhook.events;
 
-import main.java.redsli.me.mcctfdiscordhook.Main;
-import main.java.redsli.me.mcctfdiscordhook.util.BoardHelper;
-import main.java.redsli.me.mcctfdiscordhook.util.IgnoreResult;
+import redsli.me.mcctfdiscordhook.Main;
+import redsli.me.mcctfdiscordhook.util.BoardHelper;
+import redsli.me.mcctfdiscordhook.util.IgnoreResult;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;

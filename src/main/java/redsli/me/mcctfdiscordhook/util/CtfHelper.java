@@ -1,4 +1,4 @@
-package main.java.redsli.me.mcctfdiscordhook.util;
+package redsli.me.mcctfdiscordhook.util;
 
 /**
  * Created by redslime on 28.11.2017

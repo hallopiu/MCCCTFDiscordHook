@@ -1,9 +1,9 @@
-package main.java.redsli.me.mcctfdiscordhook;
+package redsli.me.mcctfdiscordhook;
 
-import main.java.redsli.me.mcctfdiscordhook.events.ChatEvent;
-import main.java.redsli.me.mcctfdiscordhook.events.JoinEvent;
-import main.java.redsli.me.mcctfdiscordhook.tasks.DiscordPresenceUpdater;
-import main.java.redsli.me.mcctfdiscordhook.util.DiscordHelper;
+import redsli.me.mcctfdiscordhook.events.ChatEvent;
+import redsli.me.mcctfdiscordhook.events.JoinEvent;
+import redsli.me.mcctfdiscordhook.tasks.DiscordPresenceUpdater;
+import redsli.me.mcctfdiscordhook.util.DiscordHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;

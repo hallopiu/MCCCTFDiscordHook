@@ -1,6 +1,6 @@
-package main.java.redsli.me.mcctfdiscordhook.util;
+package redsli.me.mcctfdiscordhook.util;
 
-import main.java.redsli.me.mcctfdiscordhook.Main;
+import redsli.me.mcctfdiscordhook.Main;
 
 /**
  * Created by redslime on 28.11.2017

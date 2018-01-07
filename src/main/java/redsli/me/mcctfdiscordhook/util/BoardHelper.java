@@ -1,6 +1,6 @@
-package main.java.redsli.me.mcctfdiscordhook.util;
+package redsli.me.mcctfdiscordhook.util;
 
-import main.java.redsli.me.mcctfdiscordhook.Main;
+import redsli.me.mcctfdiscordhook.Main;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;

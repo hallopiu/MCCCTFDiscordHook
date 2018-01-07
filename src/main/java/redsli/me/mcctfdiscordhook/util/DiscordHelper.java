@@ -1,4 +1,4 @@
-package main.java.redsli.me.mcctfdiscordhook.util;
+package redsli.me.mcctfdiscordhook.util;
 
 import com.jagrosh.discordipc.IPCClient;
 import com.jagrosh.discordipc.IPCListener;

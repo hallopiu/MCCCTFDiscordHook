@@ -1,8 +1,8 @@
-package main.java.redsli.me.mcctfdiscordhook.events;
+package redsli.me.mcctfdiscordhook.events;
 
-import main.java.redsli.me.mcctfdiscordhook.util.CtfHelper;
-import main.java.redsli.me.mcctfdiscordhook.util.IgnoreResult;
-import main.java.redsli.me.mcctfdiscordhook.util.ServerHelper;
+import redsli.me.mcctfdiscordhook.util.CtfHelper;
+import redsli.me.mcctfdiscordhook.util.IgnoreResult;
+import redsli.me.mcctfdiscordhook.util.ServerHelper;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 

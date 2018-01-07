@@ -1,14 +1,14 @@
-package main.java.redsli.me.mcctfdiscordhook.tasks;
+package redsli.me.mcctfdiscordhook.tasks;
 
 import com.jagrosh.discordipc.entities.RichPresence;
-import main.java.redsli.me.mcctfdiscordhook.Main;
-import main.java.redsli.me.mcctfdiscordhook.util.BoardHelper;
-import main.java.redsli.me.mcctfdiscordhook.util.CtfHelper;
-import main.java.redsli.me.mcctfdiscordhook.util.ServerHelper;
+import redsli.me.mcctfdiscordhook.Main;
+import redsli.me.mcctfdiscordhook.util.BoardHelper;
+import redsli.me.mcctfdiscordhook.util.CtfHelper;
+import redsli.me.mcctfdiscordhook.util.ServerHelper;
 
 import java.util.TimerTask;
 
-import static main.java.redsli.me.mcctfdiscordhook.events.JoinEvent.SB_TITLE;
+import static redsli.me.mcctfdiscordhook.events.JoinEvent.SB_TITLE;
 
 /**
  * Created by redslime on 28.11.2017
